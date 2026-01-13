@@ -1,8 +1,9 @@
 
 import React from 'react';
-import { RESTAURANT_DATA, LOGO_URL } from './constants';
+import { RESTAURANT_DATA } from './constants';
 import ActionCard from './components/ActionCard';
 import ChatBot from './components/ChatBot';
+import { Logo } from './components/Logo';
 
 const App: React.FC = () => {
   return (
@@ -17,12 +18,8 @@ const App: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent"></div>
         <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
           <div className="mb-6 bg-white/10 backdrop-blur-md rounded-full p-2 shadow-2xl border border-white/20 transition-transform hover:scale-105 duration-500">
-             <div className="rounded-full overflow-hidden w-32 h-32 md:w-40 md:h-40 flex items-center justify-center">
-                <img 
-                  src={LOGO_URL} 
-                  alt="Sai Indian Cuisine Logo" 
-                  className="w-full h-full object-contain logo-glow"
-                />
+             <div className="rounded-full overflow-hidden w-32 h-32 md:w-40 md:h-40 flex items-center justify-center bg-white/5">
+                <Logo className="w-full h-full object-contain logo-glow" />
              </div>
           </div>
           <h1 className="text-4xl md:text-5xl font-serif text-white font-bold mb-1 drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)] tracking-tight">
@@ -110,7 +107,7 @@ const App: React.FC = () => {
 
       <footer className="mt-auto pt-16 text-center">
         <div className="flex justify-center mb-6">
-          <img src={LOGO_URL} alt="Sai Logo Footer" className="w-12 h-12 opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 cursor-pointer" />
+          <Logo className="w-12 h-12 opacity-40 hover:opacity-100 transition-opacity cursor-pointer" />
         </div>
         <p className="text-[10px] text-gray-400 uppercase tracking-widest mb-1">Smart Dining Experience</p>
         <p className="text-xs text-gray-400 px-6">© {new Date().getFullYear()} {RESTAURANT_DATA.name}.</p>

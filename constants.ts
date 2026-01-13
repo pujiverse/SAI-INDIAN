@@ -12,10 +12,11 @@ export const RESTAURANT_DATA: RestaurantInfo = {
 };
 
 /**
- * Path to the official restaurant logo. 
- * Ensure the folder name is 'assets' and the filename is 'logo.png'.
+ * Path to the logo file.
+ * Note: The application primarily uses the <Logo /> component for the main visuals
+ * to ensure exact rendering of the provided SVG vector data.
  */
-export const LOGO_URL = "./assets/logo.png";
+export const LOGO_URL = "./assets/logo.svg";
 
 export const SYSTEM_PROMPT = `
 You are the AI Concierge for "Sai Indian Cuisine", a premium Indian restaurant.

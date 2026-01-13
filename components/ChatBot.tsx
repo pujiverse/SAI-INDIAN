@@ -2,7 +2,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { getGeminiResponse } from '../services/geminiService';
 import { ChatMessage } from '../types';
-import { LOGO_URL } from '../constants';
+import { Logo } from './Logo';
 
 const ChatBot: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -61,8 +61,8 @@ const ChatBot: React.FC = () => {
           {/* Header */}
           <div className="bg-sai-green p-4 flex items-center justify-between">
             <div className="flex items-center">
-              <div className="w-10 h-10 rounded-full flex items-center justify-center mr-3 overflow-hidden">
-                <img src={LOGO_URL} alt="Sai Logo" className="w-full h-full object-contain" />
+              <div className="w-10 h-10 rounded-full flex items-center justify-center mr-3 overflow-hidden bg-white/10">
+                <Logo className="w-full h-full object-contain" />
               </div>
               <div>
                 <h4 className="text-white font-bold leading-none">Smart Concierge</h4>

@@ -1,0 +1,7 @@
+{
+  "name": "Sai Indian Cuisine - Digital Concierge",
+  "description": "A premium, mobile-first landing page for Sai Indian Cuisine, featuring quick links to menu, ordering, reviews, and a smart AI concierge powered by Gemini.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

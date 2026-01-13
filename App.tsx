@@ -15,28 +15,33 @@ const App: React.FC = () => {
           alt="Authentic Indian Spread" 
           className="absolute inset-0 w-full h-full object-cover"
         />
+        {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-black/40 to-transparent"></div>
+        
         <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-          <div className="mb-6 float-anim">
-             <div className="rounded-full overflow-hidden w-36 h-36 md:w-48 md:h-48 flex items-center justify-center bg-white shadow-2xl p-1 border-4 border-white/20">
-                <Logo className="w-full h-full" />
+          {/* Logo Container - Floating animation with explicit sizing */}
+          <div className="mb-4 float-anim">
+             <div className="w-56 h-56 md:w-72 md:h-72 flex items-center justify-center relative">
+                <Logo className="w-full h-full z-20" />
              </div>
           </div>
-          <h1 className="text-4xl md:text-5xl font-serif text-white font-bold mb-1 drop-shadow-[0_4px_6px_rgba(0,0,0,0.9)] tracking-tight">
+          
+          <h1 className="text-4xl md:text-5xl font-serif text-white font-bold mb-1 drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)] tracking-tight">
             {RESTAURANT_DATA.name}
           </h1>
+          
           <div className="flex items-center justify-center space-x-2 mt-4">
-            <span className="h-[1px] w-6 bg-white/40"></span>
-            <p className="text-white text-[10px] font-bold tracking-[0.3em] uppercase drop-shadow-md">
+            <span className="h-[1px] w-8 bg-white/50"></span>
+            <p className="text-white text-[10px] font-bold tracking-[0.35em] uppercase drop-shadow-lg">
               Taste of Tradition
             </p>
-            <span className="h-[1px] w-6 bg-white/40"></span>
+            <span className="h-[1px] w-8 bg-white/50"></span>
           </div>
         </div>
       </div>
 
       {/* Quick Actions Content */}
-      <div className="px-5 -mt-16 relative z-10 space-y-4 max-w-2xl mx-auto w-full">
+      <div className="px-5 -mt-10 relative z-10 space-y-4 max-w-2xl mx-auto w-full">
         <div className="grid grid-cols-1 gap-3">
           <ActionCard 
             href={RESTAURANT_DATA.menu}
@@ -111,12 +116,12 @@ const App: React.FC = () => {
 
       <footer className="mt-auto pt-16 pb-8 text-center bg-gray-50/50">
         <div className="flex justify-center mb-6">
-          <div className="w-12 h-12 grayscale opacity-30 hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
+          <div className="w-16 h-16 grayscale opacity-30 hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
             <Logo className="w-full h-full" />
           </div>
         </div>
-        <p className="text-[10px] text-gray-400 uppercase tracking-[0.4em] mb-2 font-bold">Sai Indian Cuisine</p>
-        <p className="text-[9px] text-gray-400 px-6 max-w-xs mx-auto">© {new Date().getFullYear()} Sai Indian Cuisine. All rights reserved. Designed for NFC digital access.</p>
+        <p className="text-[10px] text-gray-400 uppercase tracking-[0.4em] mb-2 font-bold">{RESTAURANT_DATA.name}</p>
+        <p className="text-[9px] text-gray-400 px-6 max-w-xs mx-auto">© {new Date().getFullYear()} {RESTAURANT_DATA.name}. All rights reserved. Designed for NFC digital access.</p>
       </footer>
     </div>
   );

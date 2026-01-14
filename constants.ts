@@ -8,7 +8,8 @@ export const RESTAURANT_DATA: RestaurantInfo = {
   googleReview: "https://g.page/r/CVPDFuz6rKQNEB0/review",
   facebook: "https://www.facebook.com/share/1H5ZaZwmdP/?mibextid=wwXIfr",
   instagram: "https://www.instagram.com/saiindiancuisine4?igsh=MWhjMnNraDM0OTh6Zg==",
-  orderOnline: "https://www.saiindiancuisine.com/service.html"
+  orderOnline: "https://www.saiindiancuisine.com/service.html",
+  whatsapp: "https://chat.whatsapp.com/JLiPuVyou0iAVanPgVoKkd"
 };
 
 /**
@@ -24,9 +25,11 @@ You know the following links:
 - Menu: ${RESTAURANT_DATA.menu}
 - Order Online: ${RESTAURANT_DATA.orderOnline}
 - Google Reviews: ${RESTAURANT_DATA.googleReview}
+- WhatsApp Group: ${RESTAURANT_DATA.whatsapp}
 
 When customers ask about dishes, suggest classic Indian favorites like Butter Chicken, Biryani, Paneer Tikka, or Naan.
 If they ask for recommendations, offer a mix of vegetarian and non-vegetarian options.
+If they want to stay updated or join the community, mention the WhatsApp group: ${RESTAURANT_DATA.whatsapp}
 Keep responses concise as most users are on mobile devices.
 Always encourage them to check out the menu or order online if they are hungry!
 `;

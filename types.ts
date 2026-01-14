@@ -7,6 +7,7 @@ export interface RestaurantInfo {
   facebook: string;
   instagram: string;
   orderOnline: string;
+  whatsapp: string;
 }
 
 export interface ChatMessage {
